@@ -28,15 +28,12 @@ test("handleMultiSelectdropdowns", async ({ page }) => {
 test("Bootstrap dropdown", async ({ page }) => {
     await page.goto("https://www.lambdatest.com/selenium-playground/jquery-dropdown-search-demo");
 
-   // Define helper function first
    async function selectBootstrapOption(optionText: string) {
        await page.click("span.select2 span[role='combobox']");
        await page.locator(".select2-results__option")
            .locator("li", { hasText: optionText })
            .click();
    }
-
-   // Then call it
    await page.goto(
        "https://www.lambdatest.com/selenium-playground/bootstrap-dropdown-demo",
        { waitUntil: 'domcontentloaded', timeout: 60000 }
