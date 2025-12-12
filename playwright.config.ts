@@ -2,11 +2,11 @@ import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
-  testMatch: '**/basicinteractions.spec.ts',
+  //testMatch: '**/handlingdropdowns.test.ts',
   use: {
     headless: false,
-    screenshot: 'on',
-    video: 'on',
+    screenshot: 'off',
+    video: 'off',
   },
   reporter: [['html', { open: 'never' }]],
 });
