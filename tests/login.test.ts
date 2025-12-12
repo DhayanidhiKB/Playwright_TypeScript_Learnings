@@ -2,7 +2,6 @@ import { test, expect } from "@playwright/test"
 
 test("login test demo", async ({ page }) => {
 
-    
     await page.goto("https://ecommerce-playground.lambdatest.io/", { waitUntil: 'domcontentloaded', timeout: 60000 });
     
     // Wait for the element to be visible before hovering
@@ -17,8 +16,4 @@ test("login test demo", async ({ page }) => {
     await page.fill("input[name='email']", "px18@gmail.com")
     await page.fill("input[name='password']", "Px@12345")
     await page.click("//input[@type='submit']")
-
-
-
-
 })

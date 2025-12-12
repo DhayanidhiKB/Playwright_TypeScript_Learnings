@@ -2,7 +2,7 @@ import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
-  //testMatch: '**/handlingdropdowns.test.ts',
+  testMatch: '**/frames.test.ts',
   use: {
     headless: false,
     screenshot: 'off',
