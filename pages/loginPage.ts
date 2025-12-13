@@ -1,4 +1,5 @@
 import { Page } from '@playwright/test';
+import * as appValues from '../test-data/appvalues.json';
 const loginURL = "https://ecommerce-playground.lambdatest.io/index.php?";
 export default class LoginPage{
     
@@ -15,12 +16,12 @@ export default class LoginPage{
         await this.page.click("text=Login");
     }
 
-    async enterEmail(email: string){
-        await this.page.fill("input[name='email']", email);
+    async enterEmail(){
+        await this.page.fill("input[name='email']", appValues.email);
     }
 
-    async enterPassword(password: string){
-        await this.page.fill("input[name='password']", password);
+    async enterPassword(){
+        await this.page.fill("input[name='password']", appValues.password);
     }
 
     async submitLogin(){

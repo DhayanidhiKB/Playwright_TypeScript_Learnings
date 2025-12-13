@@ -1,4 +1,5 @@
 import { Page, expect } from '@playwright/test';
+import * as appValues from '../test-data/appvalues.json';
 export default class Alerts {
 
     constructor(public page: Page) { }
@@ -8,11 +9,11 @@ export default class Alerts {
         await this.page.goto(JSAlertURL);
         this.page.on("dialog", async (alert) => {
             const text = alert.defaultValue();
-            console.log(text);;
-            await alert.accept("Praveen");
+            console.log(text);
+            await alert.accept(appValues.firstName);
         })
         await this.page.locator("button:has-text('Click Me')").nth(2).click();
-        expect(this.page.locator("id=prompt-demo")).toContainText("'Praveen'");
+        expect(this.page.locator("id=prompt-demo")).toContainText("'" + appValues.firstName + "'");
     }
 
     async handleModalAlert() {
