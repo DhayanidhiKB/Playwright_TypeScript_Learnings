@@ -1,9 +1,10 @@
-import { expect, test } from "@playwright/test";
+import test from "../lambdatest-setup";
 import Alerts from "../pages/alerts";
 
 let alertsPage: Alerts; // declare variable outside tests   
 
 test.beforeEach(async ({ page }) => {
+  test.setTimeout(50000);
   alertsPage = new Alerts(page); // initialize before each test
 });
 

@@ -2,8 +2,16 @@ import { defineConfig, devices} from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
-  testMatch: '**/handlingdropdowns.test.ts', // <-- glob works for all subfolders
+  testMatch: '**/recorded.test.ts', // <-- glob works for all subfolders
   projects: [
+    //Config to run cross Browser Testing in LambdaTest
+    //  {
+    //   name: "chrome:latest:MacOS Ventura@lambdatest",
+    //   use: {
+    //     viewport: { width: 1920, height: 1080 },
+    //   },
+    // },
+    //Config to run cross Browser Testing in Local
     {
       name: 'Chrome',
       use: {

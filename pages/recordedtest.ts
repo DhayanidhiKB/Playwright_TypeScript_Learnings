@@ -7,6 +7,7 @@ export default class RecordedTest {
 
     async loginAndEditAccount() {
 
+        await this.page.waitForTimeout(5000);
         await this.page.getByRole('link', { name: 'Login' }).click();
         await this.page.getByRole('textbox', { name: 'E-Mail Address' }).click();
         await this.page.getByRole('textbox', { name: 'E-Mail Address' }).fill(appValues.email);

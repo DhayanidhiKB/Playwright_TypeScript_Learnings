@@ -1,15 +1,14 @@
-import { test, expect } from '@playwright/test';
+import { test } from "@playwright/test";
 import LoginPage from '../pages/loginPage';
 import RecordedTest from '../pages/recordedtest';
 
-let loginPage: LoginPage; // declare variable outside tests
-test.beforeEach(async ({ page }) => {
-  loginPage = new LoginPage(page); // initialize before each test
-});
-
+let loginPage: LoginPage;
 let recordedtest: RecordedTest; // declare variable outside tests
+
 test.beforeEach(async ({ page }) => {
-  recordedtest = new RecordedTest(page); // initialize before each test
+  test.setTimeout(50000);
+  loginPage = new LoginPage(page); 
+  recordedtest = new RecordedTest(page);// initialize before each test
 });
 
 test('test', async ({ page }) => {
