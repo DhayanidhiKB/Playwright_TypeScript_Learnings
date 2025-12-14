@@ -1,4 +1,4 @@
-import test from "../lambdatest-setup";
+import { test } from "@playwright/test";
 import HandlingDropdownsPage from "../pages/handlingdropdownsPage";
 
 test("handledropdowns", async ({ page }) => {

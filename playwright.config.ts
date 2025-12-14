@@ -2,7 +2,7 @@ import { defineConfig, devices} from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
-  testMatch: '**/recorded.test.ts', // <-- glob works for all subfolders
+  //testMatch: '**/recorded.test.ts', // <-- glob works for all subfolders
   projects: [
     //Config to run cross Browser Testing in LambdaTest
     //  {
@@ -28,7 +28,7 @@ export default defineConfig({
     },
   ],
   use: {
-    headless: false,
+    headless: true,
     screenshot: 'off',
     video: 'off',
   },

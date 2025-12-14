@@ -1,5 +1,5 @@
 let facebookPage: Page;
-import test from "../lambdatest-setup";
+import { test } from "@playwright/test";
 import { expect, Page} from "@playwright/test";
 import MultiWindowsPage from "../pages/multiwindowsPage";
 

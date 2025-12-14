@@ -1,4 +1,4 @@
-import test from "../lambdatest-setup";
+import { test } from "@playwright/test";
 import Alerts from "../pages/alerts";
 
 let alertsPage: Alerts; // declare variable outside tests   

@@ -1,6 +1,5 @@
 import BasicInteractions from "../pages/basicinteractions";
-import test from "../lambdatest-setup";
-
+import { test } from "@playwright/test";
 
 let basicInteractions: BasicInteractions; // declare variable outside tests
 

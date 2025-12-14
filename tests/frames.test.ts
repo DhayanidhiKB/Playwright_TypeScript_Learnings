@@ -1,4 +1,4 @@
-import test from "../lambdatest-setup";
+import { test } from "@playwright/test";
 import FramesPage from "../pages/framespage";
 
 test("Interact with frames", async ({ page }) => {
